@@ -1,0 +1,23 @@
+# Changelog
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unrealeased]
+### Added
+-Added a text file for it.
+-Added database functionality.
+-Created a randomised 5 year series of entries to exercise pandas.
+-Created a decent HTML front-end with foreign CSS.
+-Add virtues, habits, goals, and tasks. 
+
+### Changed
+- Separated all services - date, task, virtue, builder, front-end - into mico-components.
+- Separated the quotes, rules, and task & virtue texts into their own files.
+
+### Fixed
+
+### Removed
+- Much of the bulk of the task tracker
+
