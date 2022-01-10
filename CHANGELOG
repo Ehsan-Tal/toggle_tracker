@@ -6,18 +6,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unrealeased]
 ### Added
--Added a text file for it.
--Added database functionality.
--Created a randomised 5 year series of entries to exercise pandas.
--Created a decent HTML front-end with foreign CSS.
--Add virtues, habits, goals, and tasks. 
+-[Frontend] Exported JSON object to an external file - while retaining full use of it.
+-[Frontend] Allowed editing of the categories and components in the JSON through the UI.
+-[Frontend] Separated CSS for small and large viewports.
+-[Frontend] Added hover-overlay descriptions for large viewports.
+-[Frontend] Added decent CSS for description in hoverlay mode.
+-[Frontend] Added decent CSS for descriptions in subtitle mode.
+-[Frontend] Added current date to the navbar.
+-[Frontend] Added proper toggle functionality: the toggle affects the progress.
+
+-[DataScience] Created a randomised 5 year series of entries to exercise pandas.
 
 ### Changed
-- Separated all services - date, task, virtue, builder, front-end - into mico-components.
-- Separated the quotes, rules, and task & virtue texts into their own files.
+-[Frontend] Better CSS for H1 & H2
+-[Backend] The SQL now only accepts entries by the day rather than by the week: i.e., no week_id.
+-[Backend] The python only sets one value, and that is the boolean isUsed.
+-[Backend] The python now uses JSON rather than a dot ini file.
 
 ### Fixed
+- [Frontend] An issue with spaces meant non-one-word ids returned errors.
 
 ### Removed
-- Much of the bulk of the task tracker
 
+# [0.0.1] 'Javascript is strange'
+### Added
+-[Backend] Imported the calendrical and virtues python files from the notepad_dailies repository.
+
+-[Frontend] Created a JSON object.
+-[Frontend] Added a dynamic way of introducing categories.
+-[Frontend] Ensured that the rest of the code works properly - the particulars of JSON integration notwithstanding.
+-[Frontend] Added the basic toggle functionality using classes and id.
+-[Frontend] Added decent CSS for buttons: i.e., work-with-able.
+-[Frontend] Added decent CSS for articles.
+-[Frontend] Added a work-around for setting up layouts.

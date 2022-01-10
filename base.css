@@ -1,25 +1,77 @@
+
 body {
-    background: rgb(17, 17, 17);
-    color: #fff;
+    background: #444548;
+    color: white;
     
 }
-
-.title{
-    color: rgb(61, 66, 221);
-
+div.belly{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 70% 30%;
+    
+}
+img{
+    /*Add something to ensure there is no img in small viewports and slow internet*/
+    width: 400px;
+}
+.basic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    /*Something to set the row size according to content*/
 }
 
-.navbar{
-    color: rgb(232, 101, 101);
 
+h2{
+    color: white;
+    font-size: 2rem;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.lists{
-    color: rgb(43, 128, 22);
-
+article{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.image {
-    color: rgb(221, 232, 23);
+button{
+    /*I now need this to inherit its position from the article*/
+    color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    font-size: 1.2rem;
+    
+    height: 60px;
+    width: 300px;
+    border-radius: 10px;
+    transition: all 500ms;
+    overflow: hidden;
+    margin: 0px 0px 10px 0px;
+
+    background: #303134;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+button:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+div.description{
+    color: aqua;
+
+}
+button.off{
+    color: white;
+}
+button.on{
+    color: lightslategray;    
+    transform: translateY(-3px) scale(0.9);
 }
