@@ -1,42 +1,79 @@
+body, html {
+    /*Ensures uses 100% of the height viewport.*/
+    height: 100vh;
+}
 
 body {
-    background: #444548;
-    color: white;
-    
-}
-div.belly{
+    /*We are going to set the margin so that it does not use a default, and we are going to use
+    grids because it is a cool thing when used properly.*/
+    margin: 0;
     display: grid;
-    gap: 1rem;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 30% 20% 20% 30%;
+    grid-template-rows: 10% 10% auto 10%;
+    grid-template-areas: 
+    "header header header header"
+    "navbar navbar navbar image "
+    "main   main   main   image "
+    "footer footer footer footer"
+    ;
     
-}
-img{
-    /*Add something to ensure there is no img in small viewports and slow internet*/
-    width: 400px;
-}
-.basic-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    /*Something to set the row size according to content*/
 }
 
+header {
+    grid-area: header;
+    background-color: lawngreen;
+}
+
+div.navbar {
+    grid-area: navbar;
+    background-color: darkgoldenrod;
+}
+
+section {
+    margin: 0;
+    background-color: aqua;
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    float: left;
+
+}
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+}
+
+div.image {
+    grid-area: image;
+    background-color: burlywood;
+}
+
+footer {
+    grid-area: footer;
+    background-color: crimson;
+}
 
 h2{
     color: white;
     font-size: 2rem;
-    width: 300px;
+    background-color: olivedrab;
+    width: 18rem;
+    height: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-article{
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
+
+/*ADD A MEDIA QUERY TO DISABLE THE IMAGE, ALSO SOME STUFF ABOUT THE HOVER MECHANICS*/
+
+
+/* BUTTON STUFF */
 button{
     /*I now need this to inherit its position from the article*/
     color: cornflowerblue;
@@ -50,7 +87,7 @@ button{
     height: 60px;
     width: 300px;
     border-radius: 10px;
-    transition: all 500ms;
+    transition: all 200ms;
     overflow: hidden;
     margin: 0px 0px 10px 0px;
 
@@ -74,4 +111,21 @@ button.off{
 button.on{
     color: lightslategray;    
     transform: translateY(-3px) scale(0.9);
+}
+
+
+@media only screen and (max-width: 810px) {
+
+    body{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 10% auto 10%;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main  "
+    "footer"
+    ;
+    }
 }

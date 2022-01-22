@@ -6,14 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unrealeased]
 ### Added
--[Frontend] Exported JSON object to an external file - while retaining full use of it.
 -[Frontend] Allowed editing of the categories and components in the JSON through the UI.
--[Frontend] Separated CSS for small and large viewports.
 -[Frontend] Added hover-overlay descriptions for large viewports.
 -[Frontend] Added decent CSS for description in hoverlay mode.
 -[Frontend] Added decent CSS for descriptions in subtitle mode.
+-[Frontend] Added decent CSS for H1
 -[Frontend] Added current date to the navbar.
--[Frontend] Added proper toggle functionality: the toggle affects the progress.
+-[Frontend] A settings page
 
 -[DataScience] Created a randomised 5 year series of entries to exercise pandas.
 
@@ -24,9 +23,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -[Backend] The python now uses JSON rather than a dot ini file.
 
 ### Fixed
-- [Frontend] An issue with spaces meant non-one-word ids returned errors.
 
 ### Removed
+
+# [0.0.2] 'Barest Bones'
+### Added
+-[Frontend] Exported JSON object to an external file - while retaining full use of it.
+-[Frontend] Added proper toggle functionality: the toggle affects the progress.
+-[Frontend] Added date functionality.
+-[Frontend] Separated CSS for small and large viewports.
+-[Frontend] Tinkered with the CSS.
+-[Frontend] Changed the section display from grid into flex.
+-[Frontend] Added download functionality.
+-[Frontend] Added querySelectors for other items.
+
+### Fixed
+-[Frontend] An issue with spaces meant non-one-word ids returned errors.
+-[Frontend] Issue with local JSONs
+
 
 # [0.0.1] 'Javascript is strange'
 ### Added
@@ -38,4 +52,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -[Frontend] Added the basic toggle functionality using classes and id.
 -[Frontend] Added decent CSS for buttons: i.e., work-with-able.
 -[Frontend] Added decent CSS for articles.
--[Frontend] Added a work-around for setting up layouts.
+-[Frontend] Added a few work-around for setting up layouts.
