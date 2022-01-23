@@ -6,7 +6,7 @@ const section = document.querySelector('section');
 const footer = document.querySelector('footer');
 let JSONobj = {};
 
-//let json = JSON.parse('toggle-tracker.json');
+//let json = JSON.parse('toggle_tracker.json');
 // oh yeah, I complete forgot about loading the JSON in the first place.
 
 
@@ -65,7 +65,7 @@ let JSONobj = {};
  * 
  * the rest sets a download and then executes that function.
  * 
- * I would like name to match up with the toggle-tracker.json through the browse file option.
+ * I would like name to match up with the toggle_tracker.json through the browse file option.
  * 
  * author: Matěj Pokorný from a stackOverflow forum answer.
  * 
@@ -73,7 +73,7 @@ let JSONobj = {};
  * @param {String} name
  */
 function downloadJSON(JSONobj, name){
-    !(name) ? name : name = 'toggle-tracker.json';
+    !(name) ? name : name = 'toggle_tracker.json';
     //!(JSONobj) ? JSONobj : JSONobj = temp_json;
     console.log(JSONobj)
     const JSONstr = JSON.stringify(JSONobj, null, '    ');

@@ -13,18 +13,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -[Frontend] Added decent CSS for H1
 -[Frontend] Added current date to the navbar.
 -[Frontend] A settings page
+-[Frontend] A call to the backend.
 
 -[DataScience] Created a randomised 5 year series of entries to exercise pandas.
+-[DataScience] A skeleton of a GUI for the data.
 
 ### Changed
 -[Frontend] Better CSS for H1 & H2
--[Backend] The SQL now only accepts entries by the day rather than by the week: i.e., no week_id.
--[Backend] The python only sets one value, and that is the boolean isUsed.
--[Backend] The python now uses JSON rather than a dot ini file.
 
 ### Fixed
 
 ### Removed
+
+# [0.0.3] 'To-day not To-week'
+### Added
+-[Backend] Tests to the python in case there is no JSON object in the call.
+-[Backend] Guard clauses for ease of use.
+-[Backend] Much more functionalilty, e.g., SELECT, INSERT, DELETE, etc.
+
+### Changed
+-[Backend] The SQL now only accepts entries by the day rather than by the week: i.e., no week_id.
+-[Backend] The python only sets one value, and that is the boolean isUsed.
+-[Backend] The python now uses JSON rather than a dot ini file.
+-[Backend] Alterations to repr that allow for automatic new lines and '>' before the input string for ease of reading the console log.
+
+-Changed naming scheme to toggle_tracker from toggle-tracker.
+-Changed name of CSS and pyton file.
+
+### Removed
+-All unimportant files that are no longer used: configurations.py, virtue-text.py.
+-[Backend] Week-based functions are to be removed when I finish implementing the day-based ones.
 
 # [0.0.2] 'Barest Bones'
 ### Added
