@@ -9,7 +9,7 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: 30% 20% 20% 30%;
-    grid-template-rows: 10% 10% auto 10%;
+    grid-template-rows: 80px 60px auto 10%;
     grid-template-areas: 
     "header header header header"
     "navbar navbar navbar image "
@@ -17,6 +17,19 @@ body {
     "footer footer footer footer"
     ;
     
+
+}
+/*Test one*/
+body {
+    margin: 0;
+    display:grid;
+    grid-template-rows: 80px 60px auto 10%;
+    grid-template-columns: 100%;
+    grid-template-areas:
+    "header"
+    "navbar"
+    "main  "
+    "footer";
 }
 
 header {
@@ -44,6 +57,7 @@ article {
     flex-direction: column;
     align-items: center;
     justify-content: left;
+    padding: 10px;
 }
 
 div.image {

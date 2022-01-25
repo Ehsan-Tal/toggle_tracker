@@ -1,0 +1,22 @@
+{
+  "name": "toggle_tracker",
+  "version": "1.0.0",
+  "description": "A program inspired by Benjamin Franklin's Virtue Tracker",
+  "main": "toggle_tracker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MehsterTurdlord/toggle_tracker.git"
+  },
+  "author": "Ehi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MehsterTurdlord/toggle_tracker/issues"
+  },
+  "homepage": "https://github.com/MehsterTurdlord/toggle_tracker#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
