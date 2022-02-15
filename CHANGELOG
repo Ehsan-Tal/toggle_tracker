@@ -8,18 +8,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 -[Frontend] Allowed editing of the categories and components in the JSON through the UI.
 -[Frontend] Added hover-overlay descriptions for large viewports.
--[Frontend] Added decent CSS for description in hoverlay mode.
--[Frontend] Added decent CSS for descriptions in subtitle mode.
--[Frontend] Added decent CSS for H1
 -[Frontend] Added current date to the navbar.
 -[Frontend] A settings page
--[Frontend] A call to the backend.
 
 -[DataScience] Created a randomised 5 year series of entries to exercise pandas.
 -[DataScience] A skeleton of a GUI for the data.
 
 ### Changed
 -[Frontend] Better CSS for H1 & H2
+
+### Fixed
+
+### Removed
+
+# [0.0.4] A Connection
+### Added
+-[Frontend] A button call to the backend that passes the JSON object.
+-[Frontend] Automatically use a JSON.
+-[DataScience] Added a rudimentary GUI for data visualisation
+
+### Changed
 
 ### Fixed
 

@@ -1,13 +1,18 @@
-
 const header = document.querySelector('header');
 const section = document.querySelector('section');
 //const navbar = document.querySelector('#navbar');
 //const image = document.querySelector('#image');
 const footer = document.querySelector('footer');
+const axios = require('axios');
 let JSONobj = {};
 
-//let json = JSON.parse('toggle_tracker.json');
-// oh yeah, I complete forgot about loading the JSON in the first place.
+
+function sendJSON(){
+    let JSONstring = JSON.stringify(JSONobj);
+
+    axios.post('/index', JSONstring)
+};
+
 
 
 /**

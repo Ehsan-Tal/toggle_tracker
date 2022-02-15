@@ -266,9 +266,9 @@ def main(JSONobj = {}):
         testing = True;
         # if the there is no object, the file is used as test data.
 
-        with open('toggle_tracker.json', mode = 'r', encoding='utf-8' ) as f:
+        with open('public/toggle_tracker.json', mode = 'r', encoding='utf-8' ) as f:
             JSONobj = json.load(f);
-            pprint(JSONobj);
+            pprint(JSONobj);    
 
     if ( JSONobj['isUsed'] ):
         repr('JSON object already used !');
