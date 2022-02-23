@@ -3,7 +3,7 @@ const section = document.querySelector('section');
 //const navbar = document.querySelector('#navbar');
 //const image = document.querySelector('#image');
 const footer = document.querySelector('footer');
-const axios = require('axios');
+
 let JSONobj = {};
 
 
@@ -14,14 +14,13 @@ function sendJSON(){
 };
 
 
-
 /**
  * this is a function to upload the JSON object to be used.
  * 
  * author: from a stackOverflow forum answer.
  * 
  */
- async function uploadJSON(){
+function uploadJSON(){
 
     if (typeof window.FileReader !== 'function' ){
         console.log("The file API isn't supported on this browser yet.")
@@ -57,7 +56,7 @@ function sendJSON(){
         JSONobj = newArr;
     
     }
-    await populateSection(JSONobj);
+    populateSection(JSONobj);
     
     //this should not be here as it creates repeats - also, it messes with it enough that it makes multiple items.
     
@@ -180,8 +179,8 @@ function getJSONProgress (category, component){
  * 
  * @param {object} JSONobj
  */
-async function populateSection(JSONobj){
-    console.log(JSON['categories', 'populateSection'])
+function populateSection(JSONobj){
+    console.log(JSONobj);
     const categories = JSONobj['categories'];
 
     for ( let i = 0; i < categories.length; i++ ){
