@@ -1,16 +1,12 @@
 const express = require("express");
 const router = express.Router();
 
-router.get("/", function(req, res, next){
-    console.log("initial get");
-    res.render("index", {title:" Ehi\'s Two by Two Toggle Tracker"});
-    //res.send("index"); // send this eventually: Ehi\'s Two by Two Toggle Tracker
-});
+const toggles_controller = require("../controllers/togglesController");
 
-router.post("/", (req, res) => {
-    if (req) {console.log("request received")};
-    console.log(req.title);
-    //console.log(res);
-});
+router.get("/", toggles_controller.index);
+
+router.post("/", toggles_controller.index);
+
+router.post("/tracker-submit", toggles_controller.toggle_send);
 
 module.exports = router;

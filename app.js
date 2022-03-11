@@ -5,10 +5,12 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-//importing the routers – yes I chose those names for length symmetry
+//importing the routers – yes I chose those names for length symmetry — until the last two.
 const usersRouter = require("./routes/users.js");
 const indexRouter = require("./routes/index.js");
 const statsRouter = require("./routes/stats.js");
+const settingsRouter = require("./routes/settings.js");
+const FAQRouter = require("./routes/FAQ.js")
 
 //constructing the app object
 const app = express();
@@ -28,6 +30,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use("/",      indexRouter);
 app.use("/users", usersRouter);
 app.use("/stats", statsRouter);
+app.use("/settings", settingsRouter);
+app.use("/FAQ", FAQRouter);
 
 //catching any unfound ones (Error 404) and passing it to the error handler.
 app.use(function(req, res, next) {

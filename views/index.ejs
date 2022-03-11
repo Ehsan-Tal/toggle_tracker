@@ -5,37 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggle Tracker</title>
+    <title>Ehi's Toggle Tracker</title>
     <style>    </style>
-
 
 </head>
 <body>
 
-<header>
-<h1><%=title%></h1>
-</header>
-
-<div class="navbar">
-
-</div>
-
-<form action="" method="post" class="container-form">
+<form action="/tracker-submit" method="post" class="container-form">
     <section>
-        <input type="text">
-    
+
+        
     </section>
     <input type="submit" value="Submit Progress">
-    </form>
+</form>
     
     <div class="image" > 
     </div>
-    
-    <footer></footer>
-    
+
+    <%- include('layout') %> 
     </body>
     
-<script src="toggle_tracker.js">
+    <% let JSONejs = JSONobj; %> 
 
+<script src="toggle_tracker.js">  
 </script>
+
+<script>
+    let JSONobj = <%- JSON.stringify(JSONejs) %>;
+    populateSection(JSONobj);
+</script>
+
 </html>

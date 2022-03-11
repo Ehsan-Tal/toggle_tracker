@@ -1,0 +1,75 @@
+{
+    "categories": [
+        {
+            "name": "Virtues",
+            "description": "A Quality of Moral Excellence.",
+            "components": [
+                {
+                    "name": "Temperance",
+                    "progress": 0,
+                    "description": "Eat not to dullness. Drink not to elevation."
+                },
+                {
+                    "name": "Silence",
+                    "progress": 0,
+                    "description": "Speak not but what may benefit others or yourself. Avoid trifling conversation."
+                },
+                {
+                    "name": "Order",
+                    "progress": 0,
+                    "description": "Let all your things have their places. Let each part of your business have its time."
+                },
+                {
+                    "name": "Resolution",
+                    "progress": 0,
+                    "description": "Resolve to perform what you ought. Perform without fail what you resolve."
+                },
+                {
+                    "name": "Frugality",
+                    "progress": 0,
+                    "description": "Make no expense but to do good to others or yourself."
+                },
+                {
+                    "name": "Industry",
+                    "progress": 0,
+                    "description": "Lose no time. Be always employed in something useful. Cut off all unnecessary actions."
+                },
+                {
+                    "name": "Sincerity",
+                    "progress": 0,
+                    "description": "Use no hurtful deceit. Think innocently and justly; and if you speak, speak accordingly."
+                },
+                {
+                    "name": "Justice",
+                    "progress": 0,
+                    "description": "Wrong none by doing injuries, or omitting the benefits that are your duty."
+                },
+                {
+                    "name": "Moderation",
+                    "progress": 0,
+                    "description": "Avoid extremes. Forbear resenting injuries so much as you think they deserve."
+                },
+                {
+                    "name": "Cleanliness",
+                    "progress": 0,
+                    "description": "Tolerate no uncleanness in body, clothes, or habitation."
+                },
+                {
+                    "name": "Tranquility",
+                    "progress": 0,
+                    "description": "Be not disturbed at trifles, or at accidents common or unavoidable."
+                },
+                {
+                    "name": "Chastity",
+                    "progress": 0,
+                    "description": "Rarely use venery but for health or offspring"
+                },
+                {
+                    "name": "Humility",
+                    "progress": 0,
+                    "description": "Imitate Muhammed, Isa, Socrates, et al."
+                }
+            ]
+        }
+    ]
+}

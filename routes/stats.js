@@ -1,12 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-// this is to view the data in the form of graphs, etc.
+const stats_controller = require('../controllers/statsController.js')
 
-router.get("/", (req, res) => {
-    console.log("The analytics page");
-    res.send("analytics page");
-    
-    });
+router.get("/", stats_controller.index);
+
+
 
 module.exports = router;

@@ -2,6 +2,7 @@ import sqlite3
 import os
 import json
 from pprint import pprint
+import sys
 
 # TODO: make some way to CRUD the data with a GUI or even a CLI.
 # TODO: find some way to alter the print statement - or a repr statement - so that I can have all status messages be unique.
@@ -136,6 +137,8 @@ def find_progress():
     conn.commit();
     conn.close();
 
+    print(temp_string);
+
     return temp_string
 
 
@@ -266,7 +269,7 @@ def main(JSONobj = {}):
         testing = True;
         # if the there is no object, the file is used as test data.
 
-        with open('public/toggle_tracker.json', mode = 'r', encoding='utf-8' ) as f:
+        with open("./toggle_tracker.json", mode = 'r', encoding='utf-8' ) as f:
             JSONobj = json.load(f);
             pprint(JSONobj);    
 
@@ -295,7 +298,7 @@ def main(JSONobj = {}):
 
 
 if __name__ == '__main__':
-    main()
+    main();
 
 else:
-    print('This is imported as: ' + __name__)
+    print('hello');
