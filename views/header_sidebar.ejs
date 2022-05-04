@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ehi's Toggle Tracker</title>
+</head>
+<style>
+    :root{
+        --edit-width: 40px;
+        --background-colour: rgb(37, 47, 56);
+    }
+    body{
+        background-color: var(--background-colour);
+        color: whitesmoke;
+        font-size: 16px;
+        padding: 0px;
+        margin: 0px;
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        grid-auto-columns: auto 250px;
+        grid-auto-rows: 70px auto 200px;
+        grid-template: 
+        "a b"
+        "c b"
+        "d d";
+
+    }
+    button{
+        background-color: cornflowerblue;
+        display: inline-block;
+        text-align: center;
+        overflow: hidden;/*
+        border: none;*/
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 0px;
+        height: 30px;
+        cursor: pointer;
+    }
+    button:hover{
+        opacity: 0.7;
+    }
+    .submit{
+        padding: 0px;
+        height: 60px;
+        width: 100%;
+        border-radius: 0% 0% 30% 30%;
+    }
+    header{
+        grid-area: a;
+        display: grid;
+        align-content: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: black;
+        background-color: goldenrod;
+    }
+    nav{
+        grid-area: b;
+        padding: 12rem 0px 0px 40px;
+        background-color: goldenrod;
+        z-index: 1;
+        
+    }
+    nav a {
+        padding: 10px;
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+    }
+    nav a:hover {
+        cursor: pointer;
+        opacity: .7;
+    }
+    nav a:focus{
+        color:yellowgreen;
+    }
+    .content-wrapper{
+        grid-area: c;
+    }
+    .message{
+        position: absolute;
+        color: black;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 80px;
+        z-index: 1002;
+    }
+    .message-cancel{
+        position: absolute;
+        width: 40px;
+        right: 0;
+        top: 0;
+        border-radius: 0% 00% 50% 50%;
+        background-color: crimson;
+        color: white;
+    }
+    .warning{
+        display: block;
+        background-color: lightcoral;
+    }
+    .status{
+        display: block;
+        background-color: lightslategray;
+    }
+</style>
+<body>  
+    <header id="header">Ehi's Toggle Tracker</header>
+    
+    <nav id="sidebar">
+            <a href="/">The Home Page</a>
+            <a href="/user">The User Page</a>
+            <!--<a href="/stats">The Statistics Page</a>
+            <a href="/settings">The Settings Page</a>
+            <a href="/FAQ">FAQ</a>
+            <a href="/about">The About Page </a> -->  
+    </nav>
+</body>
+<script>
+    const anDisplayName = getCookie("DisplayName");
+
+    /**
+    * gets the cookie that is not HTTP only. 
+    */
+   function getCookie(cname) {
+        let name = cname + "=";
+        let ca = document.cookie.split(';');
+
+        for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    };
+
+    function displayDisplayNameAndLogout(DisplayName){
+        if(DisplayName){
+            // this displays either the user's display name or Ehi within the format of {NAME}'s Toggle Tracker.
+            // and showcases the logout option.
+            const anHeader = document.getElementById("header");
+            const anSidebar = document.getElementById("sidebar");
+            const anLogout  = document.createElement("a");
+            const heading = "Toggle Tracker";
+
+            anHeader.textContent = DisplayName + "\'s " + heading;
+
+            anLogout.setAttribute("onclick", "requestLogout()");
+            anLogout.textContent = "Logout";
+
+            anSidebar.appendChild(anLogout);   
+        }   
+    };
+
+    async function requestLogout(){
+        await fetch("/user/logout")
+        .then( res => res.json() )
+        .then( res => {
+            makeStatusMessage(res); 
+        });
+    };
+
+    /**
+     * makes a status message out of the message received.
+     * @params {String} text 
+     */
+    function makeStatusMessage(text){
+        const anDiv    = document.createElement("div");
+        const anButton = document.createElement("button");
+        const anSpan   = document.createElement("span");
+
+        anDiv.setAttribute("class", "message status");
+        anButton.className = "message-cancel";
+
+        anButton.textContent = "X";
+        anSpan.textContent = text;
+
+        anDiv.appendChild(anButton);
+        anDiv.appendChild(anSpan);
+        
+    };
+
+    function makeErrorMessage(error){
+        const anDiv    = document.createElement("div");
+        const anButton = document.createElement("button");
+        const anSpan   = document.createElement("span");
+
+        anDiv.setAttribute("class", "message warning");
+        anButton.className = "message-cancel";
+
+        anButton.textContent = "X";
+        //console.log(error);
+        anSpan.textContent = error;
+
+        anDiv.appendChild(anButton);
+        anDiv.appendChild(anSpan);    
+    };
+
+    displayDisplayNameAndLogout(anDisplayName);
+
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<body>
+    <style>
+        footer{
+            grid-area: d;
+            z-index: 2;     
+            color: gray;
+            border-color: darkgoldenrod;
+            border-top-style: double;
+            border-top-width: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 40% 60%;
+            grid-template-areas: 
+            "a b"
+            "c c";
+        }
+        .footer-top-left, .footer-top-right{
+            margin: 5px;
+        }
+        span.footer-top-left{
+            grid-area: a;
+        }
+        span.footer-top-right{
+            grid-area: b;
+        }
+        span.footer-bottom{
+            grid-area: c;
+        }
+    </style>
+    <footer>
+        <span class="footer-top-left">
+            Haha. Foot-er.    
+        </span>
+
+        <span class="footer-top-right">
+            No support right now because the site is barely bloody beyond its first breath, I tell yee.
+        </span>
+
+        <span class="footer-bottom">
+            HALLO.
+            
+        </span>
+
+    </footer>    
+</body>
+</html>

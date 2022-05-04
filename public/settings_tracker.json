@@ -1,0 +1,17 @@
+{
+    "appearance": {
+        "theme": ["default"],
+        "font": ["default", "Times New Roman"],
+        "font-size": ["12px", "16px"]
+    },
+    "security": {
+        "2FA": ["Disabled", "Enabled"],
+        "passwordExpiresIn": ["Never", "30 days", "90 days"]
+    },
+    "data": {
+        "delete": ["No"]
+    },
+    "notifications": {
+        "medium": ["None"]
+    }
+}

@@ -1,9 +1,18 @@
 #!/usr/bin/env node
-
 const app = require("../app");
 const hostname = '127.0.0.1';
-const port = 3000;
 
-app.listen(port, hostname, () => console.log(`Server running on ${hostname}: ${port}/`));
+const fs = require("fs");
 
-app.listen(process.env.PORT || 3000, () => console.log(`App available on http://localhost:3000`));
+const { API_PORT } = process.env;
+const port = process.env.PORT || API_PORT;
+
+app.listen(port, () => console.log(`App available on http://localhost:${port}`));
+
+process.on('uncaughtException', (err, origin) => {
+    fs.writeSync(
+        process.stderr.fd,
+        `Caught exception: ${err}\n` +
+        `Exception origin: ${origin}`
+    );
+});

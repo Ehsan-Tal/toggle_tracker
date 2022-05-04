@@ -1,33 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ehi's Toggle Tracker</title>
+<style>
+    .userForm{
+        display: grid;
+        grid-auto-columns: 100%;
+        margin: 50px;
+        padding: 20px;
+        width: clamp(200px, 400px, 500px);
+    }
+    input{
+        float: inline-end
+    }
+</style>
 </head>
 
 <body>
 
-    <%- include('layout') %> 
-    <div class="container">
-        <h1>Create an account </h1>
-        <form action="/users/create" method="post">
-            <label>Username: </label> <input type="text" name="" id="">
-            <!--add presence checks here and other validation here, the "conflict" check starts in the server-->
-            Password: <input type="password" name="" id="">
-            <button type="submit">Create account</button>
+    <%- include('header_sidebar') %> 
+    <div class="content-wrapper" style="display: flex" >
+        
+        <form method="POST" id="createUserAccountForm" name="createUserAccountForm" class="userForm">
+            <h1>Create an account:</h1>
+            <label>Username: <input type="text" name="userName"></label>
+            <label>Display name: <input type="text" name="displayName"></label>
+            <label>Password: <input type="password" name="password"></label>
+            <button type="submit" class="submit">Create your account</button>
         </form>
-    </div>
+    
+    <!-- insert the client-side validation here. -->
 
-    <div class="container">
-        <h1>Log in an existing account</h1>
-        <form action="/users/log-in" method="POST">
-            Username: <input type="text">
-            Password: <input type="password" name="" id="">
-            <button type="submit">Log in</button>
+        <form method="POST" id="loginUserAccountForm" name="loginUserAccountForm" class="userForm">
+            <h1>Login to an account:</h1>
+            <label>Username: <input type="text" name="userName"></label>
+            <label>Password: <input type="password" name="password"></label>
+            <label>Confirm Password: <input type="password" name="confirmPassword"></label>
+            <button type="submit" class="submit">Login to your account</button>
         </form>
     </div>
+    <!-- insert the client-side validation here. -->
+    
+    <%- include("footer.ejs") %>
 
 </body>
+<script src="/javascripts/usersScript.js"></script>
 </html>

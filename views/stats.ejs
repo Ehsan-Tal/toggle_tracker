@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<style>
+    canvas{
+        height: 400px;
+        width: 400px;
+    }
+</style>
+<body>
+    <%- include("header_sidebar.ejs") %> 
+
+    <div class="content-wrapper">
+        <canvas id="anChart" class="chart" style="height: 400px;
+        width: 400px;"></canvas>
+    </div>
+    
+    <%- include("footer.ejs") %>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"> </script>
+<script src="/javascripts/statsScript.js"></script> 
+</html>

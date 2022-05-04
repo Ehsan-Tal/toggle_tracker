@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<style>
+    .container-form{
+        display: grid;
+        grid-auto-columns: 70% 30%;
+        grid-template: "a b";
+        margin: 20px;
+    }
+    .dynamics-wrapper{
+        grid-area: a;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .statics-wrapper{
+        grid-area: b;
+        padding: 0px;
+        margin: 5px;
+    }
+    .date{
+        display: flex;
+        font-size: 2rem;
+        height: 40px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .journal{
+        padding: 0px;
+        border: 0px;
+        height: 300px;
+        width: 100%;
+    }
+    .category-wrapper{
+        padding: 5px;
+        margin: 15px;
+        width: clamp(200px, 300px, 450px);
+    }
+    .wrapper{
+        border: 0px;
+        display: grid;
+        grid-template-columns: auto var(--edit-width);
+    }
+    .on{
+        opacity: 0.4;
+    }
+    .category-adder{
+        padding: 0px;
+        height: 60px;
+        background-color: green;
+        width: 100%;
+        border-radius: 30% 30% 0% 0%;
+    }
+    .adder{
+        background-color: green;
+        width: 100%;
+        height: 30px;
+        margin-top: 2px;
+    }
+    .dropdown{
+        width: var(--edit-width);
+        height: 30px;
+        background-color: aquamarine;
+    }
+    .dropper{   
+        display: none;
+        position: absolute;
+        width: 250px;
+        padding: 8px 6px 8px 5px;
+        height: 60px;
+        margin: 0px 0px 40px 100px; 
+        background-color: slategray;
+        z-index: 3;
+        
+    }
+    .header{
+        font-size: 2rem;
+        width: calc(100% - 40px);
+        display: inline-block;
+        text-align: center;
+        overflow: clip;
+    }
+    .deleter{
+        grid-area: delete;
+        padding: 4px;
+        height: 100%;
+        background-color: lightcoral;
+        border-color: yellow;
+        border-style: groove;
+        
+    }
+    .show{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+        "name delete"
+        "desc delete";
+        box-shadow: 0px 8px 12px 3px rgba(0, 0, 0, 0.6);
+    }
+    
+</style>
+
+</head>
+<body>
+    <%- include("header_sidebar.ejs") %> 
+
+    <div class="content-wrapper">
+        <form class="container-form"></form>
+    </div>
+
+    <%- include("footer.ejs") %>
+</body>
+
+<script src="/javascripts/trackerScript.js"></script>
+
+</html>
