@@ -4,6 +4,7 @@ One that is hopefully, easier to use, more private, easier to analyse, and more 
 
 - I intend freedom and self-control for your data and experience.
 - I also intend to keep working for a very long time and in an AGILE manner. 
+- I intend to keep this app focused on being a tool for self-reflection.
 
 # How to Start
 Open up the website and toggle buttons on or off to signify that you have worked on it.
