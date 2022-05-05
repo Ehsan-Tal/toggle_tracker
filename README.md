@@ -12,11 +12,9 @@ Open up the website and toggle buttons on or off to signify that you have worked
 
 Add additional categories - Virtues, Habits - and add components - Kindness, Brushing 2 a day.
 
-Type up a journal entry to review and explain to you - and only to you - why you, e.g., made a lot of progress in industry.
+You could type up a journal entry to review and explain to you - and only to you - why you, e.g., made a lot of progress in industry this day or why you chose to mothball this or that component.
 
-And with an account, you can submit your entry to save within a database.
-
-Eventually, you could visualise and analyse the data yourself or have the app do it for you.
+And with an account, you can submit your entry to save it within a database. Eventually, you could visualise and analyse the data yourself or have the app do it for you.
 
 # Dependencies
 - chartjs - removed next version
