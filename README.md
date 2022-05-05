@@ -1,5 +1,5 @@
 # toggle_tracker
-A program inspired by Benjamin Franklin's Virtue Tracker and tray tracking papers in general. 
+a program inspired by Benjamin Franklin's Virtue Tracker and tray tracking papers in general. 
 One that is hopefully, easier to use, more private, easier to analyse, and more sustainable.
 
 - I intend freedom and self-control for your data and experience.
